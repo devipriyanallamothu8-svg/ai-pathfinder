@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI PathFinder - BFS & DFS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <div class="app">
+
+        <header>
+            <h1>🤖 AI PathFinder</h1>
+            <p>BFS & DFS Algorithm Visualizer</p>
+        </header>
+
+        <section class="controls">
+
+            <div class="control-group">
+                <label for="algorithm">Algorithm</label>
+
+                <select id="algorithm">
+                    <option value="bfs">BFS - Breadth First Search</option>
+                    <option value="dfs">DFS - Depth First Search</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <button id="runBtn">▶ Run Algorithm</button>
+                <button id="mazeBtn">🧩 Generate Maze</button>
+                <button id="clearBtn">🗑 Clear</button>
+            </div>
+
+        </section>
+
+        <section class="instructions">
+            <p>🟢 Start &nbsp;&nbsp; 🔴 Target &nbsp;&nbsp; ⬛ Wall</p>
+            <p>Tap cells to create/remove walls.</p>
+        </section>
+
+        <div id="grid"></div>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Algorithm</span>
+                <strong id="algorithmName">BFS</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Visited</span>
+                <strong id="visitedCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Path Length</span>
+                <strong id="pathLength">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Time</span>
+                <strong id="timeTaken">0 ms</strong>
+            </div>
+
+        </section>
+
+        <section class="status">
+            <p id="statusText">Ready to start the algorithm.</p>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
