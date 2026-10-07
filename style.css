@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: white;
+    min-height: 100vh;
+}
+
+.app {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #aab4c3;
+    font-size: 16px;
+}
+
+.controls {
+    background: #1b2638;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.control-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #29364b;
+    color: white;
+    font-size: 15px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.instructions {
+    background: #1b2638;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #dbe4f0;
+    font-size: 14px;
+}
+
+.instructions p:first-child {
+    margin-bottom: 7px;
+}
+
+#grid {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    border: 2px solid #3b4a63;
+    background: #263449;
+    touch-action: none;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    border: 1px solid #34445d;
+    background: #172235;
+    transition: background 0.15s ease;
+}
+
+.cell.start {
+    background: #22c55e;
+}
+
+.cell.end {
+    background: #ef4444;
+}
+
+.cell.wall {
+    background: #020617;
+}
+
+.cell.visited {
+    background: #38bdf8;
+}
+
+.cell.visited2 {
+    background: #818cf8;
+}
+
+.cell.path {
+    background: #facc15;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.stat-card {
+    background: #1b2638;
+    border-radius: 12px;
+    padding: 12px 6px;
+    text-align: center;
+}
+
+.stat-card span {
+    display: block;
+    color: #9ca9bb;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.stat-card strong {
+    font-size: 17px;
+}
+
+.status {
+    margin-top: 15px;
+    background: #1b2638;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+}
+
+#statusText {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+
+    .app {
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        padding: 13px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cell {
+        border-width: 1px;
+    }
+}
